@@ -8,5 +8,6 @@ COPY index.html /var/www/example.com/index.html
 
 COPY example.com.conf /etc/nginx/sites-available
 RUN  ln -s /etc/nginx/sites-available/example.com.conf /etc/nginx/sites-enabled
+RUN  rm /etc/nginx/sites-enabled/default
 
 CMD [ "nginx", "-g" , "daemon off;" ]
